@@ -51,12 +51,12 @@ public class DeclarationPage {
    	
     @FindBy(id = HRAJ)
     private WebElement prePayerRegion;
-    @FindBy (xpath = ".//input[@id=\”0_HRAJ\"]”)
+    @FindBy (xpath = ".//input[@id=\"0_HRAJ\"]")
     private WebElement payerRegion;
    	
     @FindBy(id = HCITY)
     private WebElement prePayerCity;
-    @FindBy (xpath = ".//input[@id=\”0_HCITY\"]”)
+    @FindBy (xpath = ".//input[@id=\"0_HCITY\"]")
     private WebElement payerCity;
    	
     @FindBy(id = HSTREET)
@@ -76,27 +76,27 @@ public class DeclarationPage {
    	
     @FindBy(id = HAPT)
     private WebElement prePayerApt;
-    @FindBy (xpath = “.//input[@id=\”0_HAPT\”]”
+    @FindBy (xpath = ".//input[@id=\"0_HAPT\"]")
     private WebElement payerApt;
 
     @FindBy(id = HZIP)
     private WebElement prePayerZip
-    @FindBy(xpath = “.//input[@id=\”0_HZIP\”]”)
+    @FindBy(xpath = ".//input[@id=\"0_HZIP\"]")
     private WebElement payerZip;
 
     @FindBy(id = HTEL)
     private WebElement prePayerTel;
-    @FindBy(xpath = “.//input[@id=\”0_HTEL\”]”)
+    @FindBy(xpath = ".//input[@id=\"0_HTEL\"]")
     private WebElement payerTel;
 
     @FindBy(id = HEMAIL)
     private WebElement prePayerEmail;
-    @FindBy(xpath = “.//input[@id=\”0_HEMAIL\”]”)
+    @FindBy(xpath = ".//input[@id=\"0_HEMAIL\"]")
     private WebElement payerEmail;
             	
     @FindBy(id = HSTI)
     private WebElement preAuthority;
-    @FindBy(xpath = “.//input[@id=\”0_HSTI\”]”)
+    @FindBy(xpath = ".//input[@id=\"0_HSTI\"]")
     private WebElement authority;
 
     @FindBy(id = H01)
@@ -105,7 +105,22 @@ public class DeclarationPage {
     @FindBy(id = H03)
     private WebElement whoFilled;
 
-
+    @FindBy(id = H05)
+    private WebElement payerCategory;
+    
+    @FindBy(id = R010G3)
+    private WebElement preSumIncome;
+    @FindBy(xpath = ".//input[@id=\"0_R010G3\"]")
+    private WebElement sumIncome;
+    
+    @FindBy(id = R010G4)
+    private WebElement
+    @FindBy(xpath = ".//input[@id=\"0_R010G4\"]")
+    private WebElement
+    
+    @FindBy(id = R010G5)
+    private WebElement
+    @FindBy(xpath = ".//input[@id=\"0_R010G5\"]")
 
 
     public void setDeclareType(){
