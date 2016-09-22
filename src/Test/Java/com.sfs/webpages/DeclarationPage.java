@@ -30,42 +30,42 @@ public class DeclarationPage {
     private WebElement declarType;
 
     @FindBy(id = HZY)
-	private WebElement preDeclarYear;
+    private WebElement preDeclarYear;
     @FindBy(xpath = ".//input[@id = \"0_HZY\"]")
     private WebElement declarYear;
    	
- 	@FindBy(id = HNAME)
-	private WebElement prePayerName;
+    @FindBy(id = HNAME)
+    private WebElement prePayerName;
     @FindBy(xpath = ".//input[@id=\"0_HNAME\"]")
     private WebElement payerName;
    	
- 	@FindBy(id = HTIN)
-	private WebElement prePegisrOrPassport;
+    @FindBy(id = HTIN)
+    private WebElement prePegisrOrPassport;
     @FindBy(xpath = ".//input[@id = \"0_HTIN\"]")
     private WebElement registrOrPassport;
    	
- 	@FindBy(id = HREG)
-	private WebElement prePayerObl;
+    @FindBy(id = HREG)
+    private WebElement prePayerObl;
     @FindBy (xpath = ".//input[@id=\"0_HREG\"]")
     private WebElement payerObl;
    	
- 	@FindBy(id = HRAJ)
+    @FindBy(id = HRAJ)
     private WebElement prePayerRegion;
     @FindBy (xpath = ".//input[@id=\”0_HRAJ\"]”)
     private WebElement payerRegion;
    	
- 	@FindBy(id = HCITY)
-	private WebElement prePayerCity;
+    @FindBy(id = HCITY)
+    private WebElement prePayerCity;
     @FindBy (xpath = ".//input[@id=\”0_HCITY\"]”)
     private WebElement payerCity;
    	
- 	@FindBy(id = HSTREET)
-	private WebElement prePayerStreet;
+    @FindBy(id = HSTREET)
+    private WebElement prePayerStreet;
     @FindBy (xpath = ".//input[@id=\"0_HSTREET\"]")
     private WebElement payerStreet;
-   	
- 	@FindBy(id = HBUILD)
-	private WebElement prePayerBuild;
+   
+    @FindBy(id = HBUILD)
+    private WebElement prePayerBuild;
     @FindBy (xpath = ".//input[@id=\"0_HBUILD\"]")
     private WebElement payerBuild;
    	
@@ -79,20 +79,20 @@ public class DeclarationPage {
     @FindBy (xpath = “.//input[@id=\”0_HAPT\”]”
     private WebElement payerApt;
 
-	@FindBy(id = HZIP)
-	private WebElement prePayerZip
-	@FindBy(xpath = “.//input[@id=\”0_HZIP\”]”)
-	private WebElement payerZip;
+    @FindBy(id = HZIP)
+    private WebElement prePayerZip
+    @FindBy(xpath = “.//input[@id=\”0_HZIP\”]”)
+    private WebElement payerZip;
 
-	@FindBy(id = HTEL)
-	private WebElement prePayerTel;
-	@FindBy(xpath = “.//input[@id=\”0_HTEL\”]”)
-	private WebElement payerTel;
+    @FindBy(id = HTEL)
+    private WebElement prePayerTel;
+    @FindBy(xpath = “.//input[@id=\”0_HTEL\”]”)
+    private WebElement payerTel;
 
-	@FindBy(id = HEMAIL)
-	private WebElement prePayerEmail;
-	@FindBy(xpath = “.//input[@id=\”0_HEMAIL\”]”)
-	private WebElement payerEmail;
+    @FindBy(id = HEMAIL)
+    private WebElement prePayerEmail;
+    @FindBy(xpath = “.//input[@id=\”0_HEMAIL\”]”)
+    private WebElement payerEmail;
             	
     @FindBy(id = HSTI)
     private WebElement preAuthority;
