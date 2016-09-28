@@ -1,5 +1,6 @@
 package com.sfs.webpages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,132 +12,127 @@ import org.openqa.selenium.support.PageFactory;
 public class DeclarationPage {
     private WebDriver driver;
 
-//    "Anchor" to check if the page opened
-    @FindBy(xpath = ".//span[@id=\"templ:tpt_l4::text\"]")
-    private WebElement anchorHeader;
 
-//    Constructor
-    public DeclarationPage (WebDriver driver) {
+    public DeclarationPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-//    Method to check if the page opened - assertion
-    public boolean isPageOpened(){
-        return anchorHeader.getText().toString().contains("Декларація про майновий стан");
+    public Boolean isPageOpened() {
+        return driver.findElements(By.xpath(".//span[@id=\"templ:tpt_l4::text\"]")).size() > 0;
     }
 
     @FindBy(css = "div#HZ")
-    private WebElement declarType;
+    public WebElement declarType;
 
-    @FindBy(id = HZY)
-    private WebElement preDeclarYear;
+    @FindBy(id = "HZY")
+    public WebElement preDeclarYear;
     @FindBy(xpath = ".//input[@id = \"0_HZY\"]")
     private WebElement declarYear;
-   	
-    @FindBy(id = HNAME)
-    private WebElement prePayerName;
+
+    @FindBy(id = "HNAME")
+    public WebElement prePayerName;
     @FindBy(xpath = ".//input[@id=\"0_HNAME\"]")
     private WebElement payerName;
-   	
-    @FindBy(id = HTIN)
-    private WebElement prePegisrOrPassport;
+
+    @FindBy(id = "HTIN")
+    public WebElement preRegisrOrPassport;
     @FindBy(xpath = ".//input[@id = \"0_HTIN\"]")
     private WebElement registrOrPassport;
-   	
-    @FindBy(id = HREG)
-    private WebElement prePayerObl;
-    @FindBy (xpath = ".//input[@id=\"0_HREG\"]")
+
+    @FindBy(id = "HREG")
+    public WebElement prePayerObl;
+    @FindBy(xpath = ".//input[@id=\"0_HREG\"]")
     private WebElement payerObl;
-   	
-    @FindBy(id = HRAJ)
-    private WebElement prePayerRegion;
-    @FindBy (xpath = ".//input[@id=\"0_HRAJ\"]")
+
+    @FindBy(id = "HRAJ")
+    public WebElement prePayerRegion;
+    @FindBy(xpath = ".//input[@id=\"0_HRAJ\"]")
     private WebElement payerRegion;
-   	
-    @FindBy(id = HCITY)
-    private WebElement prePayerCity;
-    @FindBy (xpath = ".//input[@id=\"0_HCITY\"]")
+
+    @FindBy(id = "HCITY")
+    public WebElement prePayerCity;
+    @FindBy(xpath = ".//input[@id=\"0_HCITY\"]")
     private WebElement payerCity;
-   	
-    @FindBy(id = HSTREET)
-    private WebElement prePayerStreet;
-    @FindBy (xpath = ".//input[@id=\"0_HSTREET\"]")
+
+    @FindBy(id = "HSTREET")
+    public WebElement prePayerStreet;
+    @FindBy(xpath = ".//input[@id=\"0_HSTREET\"]")
     private WebElement payerStreet;
-   
-    @FindBy(id = HBUILD)
-    private WebElement prePayerBuild;
-    @FindBy (xpath = ".//input[@id=\"0_HBUILD\"]")
+
+    @FindBy(id = "HBUILD")
+    public WebElement prePayerBuild;
+    @FindBy(xpath = ".//input[@id=\"0_HBUILD\"]")
     private WebElement payerBuild;
-   	
-    @FindBy(id = HCORP)
-    private WebElement prePayerCorp;
-    @FindBy (xpath = ".//input[@id=\"0_HCORP\"]")
+
+    @FindBy(id = "HCORP")
+    public WebElement prePayerCorp;
+    @FindBy(xpath = ".//input[@id=\"0_HCORP\"]")
     private WebElement payerCorp;
-   	
-    @FindBy(id = HAPT)
-    private WebElement prePayerApt;
-    @FindBy (xpath = ".//input[@id=\"0_HAPT\"]")
+
+    @FindBy(id = "HAPT")
+    public WebElement prePayerApt;
+    @FindBy(xpath = ".//input[@id=\"0_HAPT\"]")
     private WebElement payerApt;
 
-    @FindBy(id = HZIP)
-    private WebElement prePayerZip
+    @FindBy(id = "HZIP")
+    public WebElement prePayerZip;
     @FindBy(xpath = ".//input[@id=\"0_HZIP\"]")
     private WebElement payerZip;
 
-    @FindBy(id = HTEL)
-    private WebElement prePayerTel;
+    @FindBy(id = "HTEL")
+    public WebElement prePayerTel;
     @FindBy(xpath = ".//input[@id=\"0_HTEL\"]")
     private WebElement payerTel;
 
-    @FindBy(id = HEMAIL)
-    private WebElement prePayerEmail;
+    @FindBy(id = "HEMAIL")
+    public WebElement prePayerEmail;
     @FindBy(xpath = ".//input[@id=\"0_HEMAIL\"]")
     private WebElement payerEmail;
-            	
-    @FindBy(id = HSTI)
-    private WebElement preAuthority;
+
+    @FindBy(id = "HSTI")
+    public WebElement preAuthority;
     @FindBy(xpath = ".//input[@id=\"0_HSTI\"]")
     private WebElement authority;
 
-    @FindBy(id = H01)
-    private WebElement residentStatus;
+    @FindBy(id = "H01")
+    public WebElement residentStatus;
 
-    @FindBy(id = H03)
-    private WebElement whoFilled;
+    @FindBy(id = "H03")
+    public WebElement whoFilled;
 
-    @FindBy(id = H05)
-    private WebElement payerCategory;
-    
-    @FindBy(id = R010G3)
-    private WebElement preSumIncome;
+    @FindBy(id = "H05")
+    public WebElement payerCategory;
+
+    @FindBy(id = "R010G3")
+    public WebElement preSumIncome;
     @FindBy(xpath = ".//input[@id=\"0_R010G3\"]")
     private WebElement sumIncome;
-    
-    @FindBy(id = R010G4)
-    private WebElement
-    @FindBy(xpath = ".//input[@id=\"0_R010G4\"]")
-    private WebElement
-    
-    @FindBy(id = R010G5)
-    private WebElement
-    @FindBy(xpath = ".//input[@id=\"0_R010G5\"]")
+
+//    @FindBy(id = "R010G4")
+//    private WebElement
+//    @FindBy(xpath = ".//input[@id=\"0_R010G4\"]")
+//    private WebElement
+
+//    @FindBy(id = "R010G5")
+//    private WebElement
+//    @FindBy(xpath = ".//input[@id=\"0_R010G5\"]")
 
 
-    public void setDeclareType(){
+//    public void setDeclareType() {
+//
+//    }
 
-    }
-    
-    public void clickPreElement(WebElement preElem){
+    public void clickPreElement(WebElement preElem) {
         preElem.click();
     }
-    
-    public void setValue(WebElement elem, String value){
-        elem.clear();
-        elem.sendKeys(value);
-    }
 
-/*
+//    public void setValue(WebElement elem, String value) {
+//        elem.clear();
+//        elem.sendKeys(value);
+//    }
+
+
     public void setDeclarYear(String year) {
         declarYear.clear();
         declarYear.sendKeys(year);
@@ -181,5 +177,35 @@ public class DeclarationPage {
         payerCorp.clear();
         payerCorp.sendKeys(corp);
     }
-*/
+
+    public void setPayerApt(String apt) {
+        payerApt.clear();
+        payerApt.sendKeys(apt);
+    }
+
+    public void setPayerZip(String zip){
+        payerZip.clear();
+        payerZip.sendKeys(zip);
+    }
+
+    public void setPayerTel(String tel){
+        payerTel.clear();
+        payerTel.sendKeys(tel);
+    }
+
+    public void setPayerEmail(String email){
+        payerEmail.clear();
+        payerEmail.sendKeys(email);
+    }
+
+    public void setAuthority(String auth){
+        authority.clear();
+        authority.sendKeys(auth);
+    }
+
+    public void setSumIncome(String inc){
+        sumIncome.clear();
+        sumIncome.sendKeys(inc);
+    }
+
 }
