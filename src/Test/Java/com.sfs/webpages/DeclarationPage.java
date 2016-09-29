@@ -109,29 +109,15 @@ public class DeclarationPage {
     @FindBy(xpath = ".//input[@id=\"0_R010G3\"]")
     private WebElement sumIncome;
 
-//    @FindBy(id = "R010G4")
-//    private WebElement
-//    @FindBy(xpath = ".//input[@id=\"0_R010G4\"]")
-//    private WebElement
+    @FindBy(id = "HBOS")
+    public WebElement prePayer;
+    @FindBy(xpath = ".//input[@id=\"0_HBOS\"]")
+    private WebElement payer;
 
-//    @FindBy(id = "R010G5")
-//    private WebElement
-//    @FindBy(xpath = ".//input[@id=\"0_R010G5\"]")
-
-
-//    public void setDeclareType() {
-//
-//    }
 
     public void clickPreElement(WebElement preElem) {
         preElem.click();
     }
-
-//    public void setValue(WebElement elem, String value) {
-//        elem.clear();
-//        elem.sendKeys(value);
-//    }
-
 
     public void setDeclarYear(String year) {
         declarYear.clear();
@@ -206,6 +192,11 @@ public class DeclarationPage {
     public void setSumIncome(String inc){
         sumIncome.clear();
         sumIncome.sendKeys(inc);
+    }
+
+    public void setPayer(String pay){
+        payer.clear();
+        payer.sendKeys(pay);
     }
 
 }

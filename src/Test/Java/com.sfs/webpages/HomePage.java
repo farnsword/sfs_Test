@@ -11,7 +11,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-//import org.openqa.selenium.support.How;
 
 public class HomePage {
     private WebDriver driver;
@@ -36,7 +35,6 @@ public class HomePage {
 
     public void clickDeclarButton() {
         String jsVisChange = "arguments[0].style.visibility='visible';";
-//        String jsClick = "arguments[0].click();";
         ((JavascriptExecutor) driver).executeScript(jsVisChange, linkToCheck);
         String jsFocus = "arguments[0].focus();return false;";
         ((JavascriptExecutor) driver).executeScript(jsFocus, linkToCheck);
@@ -47,13 +45,8 @@ public class HomePage {
 
     }
 
-//    public String textOfDeclarButton(){
-//        return declar.getText();
-//    }
-
-//    public void mouseOver(WebElement e){
-//        Actions coursorOver = new Actions(driver);
-//        coursorOver.moveToElement(getElement(e).build().perform());
-//    }
+    public String textOfDeclarButton(){
+        return declar.getText();
+    }
 
 }

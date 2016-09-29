@@ -26,10 +26,7 @@ public class DeclarationFulfilmentTest {
 //        System.setProperty("webdriver.gecko.driver", "D:\\Job\\Testing\\geckodriver\\geckodriver.exe");
         System.setProperty("webdriver.chrome.driver", "D:\\Job\\Testing\\chromedriver\\chromedriver.exe");
 //
-//        System.setProperty("webdriver.ie.driver", "D:\\Job\\Testing\\IEDriverServer.exe");
-//        DesiredCapabilities capabilitiesIE = DesiredCapabilities.internetExplorer();
-//        capabilitiesIE.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-//        driver = new InternetExplorerDriver(capabilitiesIE);
+//        System.setProperty("webdriver.edge.driver", "D:\\Job\\Testing\\MicrosoftWebDriver.exe");
 
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -40,6 +37,7 @@ public class DeclarationFulfilmentTest {
         HomePage testHomePage = new HomePage(driver);
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(".//div[@id=\"templ:b16\"]/a")));
+        Assert.assertEquals("Декларація про майновий стан", testHomePage.textOfDeclarButton());
         testHomePage.clickDeclarButton();
 
         DeclarationPage testDeclarPage = new DeclarationPage(driver);
@@ -47,16 +45,15 @@ public class DeclarationFulfilmentTest {
         driver.switchTo().frame("templ:r1:0:iffarmeData::f");
 
         testDeclarPage.declarType.click();
-        testDeclarPage.declarType.click();
 
         testDeclarPage.clickPreElement(testDeclarPage.preDeclarYear);
         testDeclarPage.setDeclarYear("2015");
 
         testDeclarPage.clickPreElement(testDeclarPage.prePayerName);
-        testDeclarPage.setPayerName("Иванов Иван Иванович");
+        testDeclarPage.setPayerName("Іванов Іван Іванович");
 
         testDeclarPage.clickPreElement(testDeclarPage.preRegisrOrPassport);
-        testDeclarPage.setRegistrOrPassport("AA000000");
+        testDeclarPage.setRegistrOrPassport("АА000000");
 
         testDeclarPage.clickPreElement(testDeclarPage.prePayerObl);
         testDeclarPage.setPayerObl("Київська");
@@ -99,6 +96,9 @@ public class DeclarationFulfilmentTest {
 
         testDeclarPage.clickPreElement(testDeclarPage.preSumIncome);
         testDeclarPage.setSumIncome("40000");
+
+        testDeclarPage.clickPreElement((testDeclarPage.prePayer));
+        testDeclarPage.setPayer("Іванов Іван Іванович");
 
     }
 
